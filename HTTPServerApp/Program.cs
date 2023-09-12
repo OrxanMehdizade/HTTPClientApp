@@ -12,9 +12,9 @@ namespace HTTPServerApp
         {
             List<UserServer> users = new()
             {
-                new(){ FirstName = "Orxan", LastName = "Mehdizade", Age = "22" },
-                new(){ FirstName = "Abbas", LastName = "Bagirov", Age = "42" },
-                new(){ FirstName = "Nadir", LastName = "Nadirli", Age = "35" },
+                new(){ FirstName = "Orxan", LastName = "Mehdizade" },
+                new(){ FirstName = "Abbas", LastName = "Bagirov" },
+                new(){ FirstName = "Nadir", LastName = "Nadirli" },
             };
 
             HttpListener listener = new();
@@ -52,7 +52,6 @@ namespace HTTPServerApp
                     UserServer.staticID--;
                     users.FirstOrDefault(u => u.Id == updateUser!.Id)!.FirstName = updateUser!.FirstName;
                     users.FirstOrDefault(u => u.Id == updateUser!.Id)!.LastName = updateUser!.LastName;
-                    users.FirstOrDefault(u => u.Id == updateUser!.Id)!.Age = updateUser!.Age;
                     var text = JsonSerializer.Serialize(users);
                     streamWriter.WriteLine(text);
                     streamWriter.Close();

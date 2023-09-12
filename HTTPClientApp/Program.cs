@@ -35,7 +35,7 @@ namespace HTTPClientApp
                     var userFirstName = Console.ReadLine();
                     var userLastName = Console.ReadLine();
                     var userAge = Console.ReadLine();
-                    UserClient user = new() { FirstName = userFirstName, LastName = userLastName, Age = userAge };
+                    UserClient user = new() { FirstName = userFirstName, LastName = userLastName };
                     msg.Content = new StringContent(JsonSerializer.Serialize(user));
                 }
             }
@@ -48,7 +48,7 @@ namespace HTTPClientApp
                     var userFirstName = Console.ReadLine();
                     var userLastName = Console.ReadLine();
                     var userAge = Console.ReadLine();
-                    UserClient user = new() { Id = Id, FirstName = userFirstName, LastName = userLastName, Age = userAge };
+                    UserClient user = new() { Id = Id, FirstName = userFirstName, LastName = userLastName };
                     msg.Content = new StringContent(JsonSerializer.Serialize(user));
                 }
             }

@@ -11,8 +11,7 @@ namespace HTTPClientApp
         public int Id { get; set; }
         public string? FirstName { get; set; }
         public string? LastName { get; set; }
-        public string Age  { get; set; }
-        public override string ToString() => $"{Id} - {FirstName} - {LastName} - {Age}";
+        public override string ToString() => $"{Id} - {FirstName} - {LastName}";
 
     }
 }

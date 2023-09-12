@@ -12,4 +12,8 @@
     <PackageReference Include="MaterialDesignThemes" Version="4.9.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\HTTPClientApp\HTTPClientApp.csproj" />
+  </ItemGroup>
+
 </Project>
